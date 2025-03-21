@@ -3,6 +3,16 @@
 #C
 COR_VERMELHO = (237, 24, 24)
 COR_BRANCO = (255,255,255)
+COR_LARANJA = (255,150,40)
+
+#E
+ENTITY_SPEED = {
+    'lvl1_bg0': 3,
+    'lvl1_bg1': 3,
+    'lvl1_bg2': 2,
+    'lvl1_bg3': 3,
+    'lvl1_bg4': 7
+}
 
 #M
 MENU_OPTION = ('NEW GAME 1P',
