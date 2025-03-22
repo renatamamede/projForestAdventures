@@ -10,7 +10,7 @@ from code.constantes import WIN_WIDTH, COR_VERMELHO, MENU_OPTION, COR_BRANCO, CO
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/menu.png')  # Carrega a imagem (mas não coloca ela em lugar nenhum ainda)
+        self.surf = pygame.image.load('./asset/menu.png').convert_alpha()  # Carrega a imagem (mas não coloca ela em lugar nenhum ainda)
         self.rect = self.surf.get_rect(left=0, top=0)  # Esses valores são o padrão (nem precisariam ser explicitados). Significa que o retângulo começa na posição 0 da esquerda e do topo
 
     def run(self, ):
