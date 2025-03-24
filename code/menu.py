@@ -3,7 +3,6 @@ import pygame.image
 from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
-import pygame.freetype
 from code.constantes import WIN_WIDTH, COR_VERMELHO, MENU_OPTION, COR_BRANCO, COR_LARANJA
 
 
@@ -35,9 +34,9 @@ class Menu:
             pygame.display.flip()  # É esse aqui que vai fazer aparecer a imagem na janelinha.
 
 
-            #Checagem e laços de de TODOS OS EVENTOS
+            #Checagem e laços de TODOS OS EVENTOS
             for event in pygame.event.get():  # Checa eventos relacionados ao pygame.
-                # Evento pra fechar a janela:
+                # Evento para fechar a janela:
                 if event.type == pygame.QUIT:
                     pygame.quit()  # Faz com que possamos clicar no botão que fecha a janela
                     quit()  # Encerra o pygame

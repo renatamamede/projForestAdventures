@@ -1,4 +1,5 @@
 # Aqui ficarão os valores constantes que usamos várias vezes, sem ter que ficar mudando manualmente nas classes.
+import pygame
 
 #C
 COR_VERMELHO = (237, 24, 24)
@@ -11,8 +12,14 @@ ENTITY_SPEED = {
     'lvl1_bg1': 3,
     'lvl1_bg2': 2,
     'lvl1_bg3': 3,
-    'lvl1_bg4': 7
+    'lvl1_bg4': 7,
+    'Player1': 10,
+    'Player2': 10,
+    'Enemy1': 7,
+    'Enemy2': 5
 }
+
+EVENT_ENEMY = pygame.USEREVENT + 1
 
 #M
 MENU_OPTION = ('NEW GAME 1P',
@@ -20,6 +27,21 @@ MENU_OPTION = ('NEW GAME 1P',
                'NEW GAME 2P - PVP',
                'SCORE',
                'EXIT')
+
+#P
+PLAYER_KEY_UP = {'Player1': pygame.K_UP,
+                 'Player2': pygame.K_w}
+PLAYER_KEY_DOWN = {'Player1': pygame.K_DOWN,
+                 'Player2': pygame.K_s}
+PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
+                 'Player2': pygame.K_a}
+PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
+                 'Player2': pygame.K_d}
+PLAYER_KEY_ATK = {'Player1': pygame.K_RCTRL,
+                 'Player2': pygame.K_LCTRL}
+
+#S
+SPAWN_TIME = 2800
 
 #W
 WIN_WIDTH = 960  # Largura da janela do jogo
