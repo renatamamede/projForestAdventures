@@ -7,6 +7,13 @@ COR_BRANCO = (255,255,255)
 COR_LARANJA = (255,150,40)
 
 #E
+ENTITY_ATK_DELAY = {
+'Player1': 5,
+'Player2': 5,
+'Enemy1': 20,
+'Enemy2': 20,
+}
+
 ENTITY_HEALTH = {
     'lvl1_bg0': 999,
     'lvl1_bg1': 999,
@@ -20,7 +27,7 @@ ENTITY_HEALTH = {
     'Enemy1': 50,
     'Enemy1Atk': 1,
     'Enemy2': 80,
-    'Enemy2Atk': 3,
+    'Enemy2Atk': 1,
 }
 
 ENTITY_SPEED = {
@@ -30,9 +37,13 @@ ENTITY_SPEED = {
     'lvl1_bg3': 3,
     'lvl1_bg4': 7,
     'Player1': 10,
+    'Player1Atk': 10,
     'Player2': 10,
+    'Player2Atk': 10,
     'Enemy1': 7,
-    'Enemy2': 5
+    'Enemy1Atk': 10,
+    'Enemy2': 5,
+    'Enemy2Atk': 12,
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1

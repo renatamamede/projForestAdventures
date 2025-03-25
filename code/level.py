@@ -7,11 +7,12 @@ import pygame.time
 from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
-
 from code.constantes import COR_BRANCO, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME
+from code.enemy import Enemy
 from code.entityFactory import EntityFactory
 from code.entity import Entity
 from code.entityMediator import EntityMediator
+from code.player import Player
 
 
 # Construtor
@@ -37,6 +38,10 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)  # Desenha as imagens na tela
                 ent.move()
+                if isinstance(ent, (Player, Enemy)):
+                    atk = ent.atk()
+                    if atk is not None:
+                        self.entity_list.append(atk)
             pygame.display.flip()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
