@@ -11,6 +11,8 @@ from pygame.surface import Surface
 from code.constantes import COR_BRANCO, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME
 from code.entityFactory import EntityFactory
 from code.entity import Entity
+from code.entityMediator import EntityMediator
+
 
 # Construtor
 class Level:
@@ -50,6 +52,10 @@ class Level:
             self.level_text(14, f'FPS: {clock.get_fps() :.0f}', COR_BRANCO, (10, WIN_HEIGHT-35))
             self.level_text(14, f'Entidades: {len(self.entity_list)}', COR_BRANCO, (10, WIN_HEIGHT-20))
             pygame.display.flip()
+
+            #Aqui vamos por o mediador pra verificar colisões e vida das entidades:
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.Font('./asset/PressStart2P-Regular.ttf', size=text_size)

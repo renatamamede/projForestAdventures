@@ -7,6 +7,22 @@ COR_BRANCO = (255,255,255)
 COR_LARANJA = (255,150,40)
 
 #E
+ENTITY_HEALTH = {
+    'lvl1_bg0': 999,
+    'lvl1_bg1': 999,
+    'lvl1_bg2': 999,
+    'lvl1_bg3': 999,
+    'lvl1_bg4': 999,
+    'Player1': 300,
+    'Player1Atk': 1,
+    'Player2': 300,
+    'Player2Atk': 1,
+    'Enemy1': 50,
+    'Enemy1Atk': 1,
+    'Enemy2': 80,
+    'Enemy2Atk': 3,
+}
+
 ENTITY_SPEED = {
     'lvl1_bg0': 3,
     'lvl1_bg1': 3,
@@ -41,7 +57,7 @@ PLAYER_KEY_ATK = {'Player1': pygame.K_RCTRL,
                  'Player2': pygame.K_LCTRL}
 
 #S
-SPAWN_TIME = 2800
+SPAWN_TIME = 1000
 
 #W
 WIN_WIDTH = 960  # Largura da janela do jogo
