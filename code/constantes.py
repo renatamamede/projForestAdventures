@@ -5,6 +5,8 @@ import pygame
 COR_VERMELHO = (237, 24, 24)
 COR_BRANCO = (255,255,255)
 COR_LARANJA = (255,150,40)
+COR_VERDE = (155,254,141)
+COR_CIANO = (255,128,255)
 
 #E
 ENTITY_ATK_DELAY = {
@@ -12,6 +14,22 @@ ENTITY_ATK_DELAY = {
 'Player2': 5,
 'Enemy1': 20,
 'Enemy2': 20,
+}
+
+ENTITY_DAMAGE = {
+    'lvl1_bg0': 0,
+    'lvl1_bg1': 0,
+    'lvl1_bg2': 0,
+    'lvl1_bg3': 0,
+    'lvl1_bg4': 0,
+    'Player1': 1,
+    'Player1Atk': 20,
+    'Player2': 1,
+    'Player2Atk': 20,
+    'Enemy1': 50,
+    'Enemy1Atk': 30,
+    'Enemy2': 80,
+    'Enemy2Atk': 30,
 }
 
 ENTITY_HEALTH = {
@@ -28,6 +46,22 @@ ENTITY_HEALTH = {
     'Enemy1Atk': 1,
     'Enemy2': 80,
     'Enemy2Atk': 1,
+}
+
+ENTITY_SCORE = {
+    'lvl1_bg0': 0,
+    'lvl1_bg1': 0,
+    'lvl1_bg2': 0,
+    'lvl1_bg3': 0,
+    'lvl1_bg4': 0,
+    'Player1': 0,
+    'Player1Atk': 0,
+    'Player2': 0,
+    'Player2Atk': 0,
+    'Enemy1': 100,
+    'Enemy1Atk': 0,
+    'Enemy2': 200,
+    'Enemy2Atk': 0,
 }
 
 ENTITY_SPEED = {

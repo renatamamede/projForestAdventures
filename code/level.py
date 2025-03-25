@@ -7,7 +7,7 @@ import pygame.time
 from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
-from code.constantes import COR_BRANCO, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME
+from code.constantes import COR_BRANCO, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, COR_VERDE, COR_CIANO
 from code.enemy import Enemy
 from code.entityFactory import EntityFactory
 from code.entity import Entity
@@ -42,7 +42,13 @@ class Level:
                     atk = ent.atk()
                     if atk is not None:
                         self.entity_list.append(atk)
+                if ent.name == 'Player1':
+                    self.level_text(14, f'Player1 - Health: {ent.health} | Score: {ent.score}', COR_VERDE, (10, 25))
+                if ent.name == 'Player2':
+                    self.level_text(14, f'Player2 - Health: {ent.health} | Score: {ent.score}', COR_CIANO, (10, 45))
+
             pygame.display.flip()
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -53,6 +59,7 @@ class Level:
                     # self.entity_list.append(EntityFactory.get_entity('Enemy1'))  # Pode ser assim, ou como acima pra spawnar mais inimigos diferentes
 
             # Textos da tela da fase
+
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000 :.1f}s', COR_BRANCO, (10,5))
             self.level_text(14, f'FPS: {clock.get_fps() :.0f}', COR_BRANCO, (10, WIN_HEIGHT-35))
             self.level_text(14, f'Entidades: {len(self.entity_list)}', COR_BRANCO, (10, WIN_HEIGHT-20))
