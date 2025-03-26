@@ -22,6 +22,11 @@ ENTITY_DAMAGE = {
     'lvl1_bg2': 0,
     'lvl1_bg3': 0,
     'lvl1_bg4': 0,
+    'lvl2_bg0': 0,
+    'lvl2_bg1': 0,
+    'lvl2_bg2': 0,
+    'lvl2_bg3': 0,
+    'lvl2_bg4': 0,
     'Player1': 1,
     'Player1Atk': 20,
     'Player2': 1,
@@ -38,6 +43,11 @@ ENTITY_HEALTH = {
     'lvl1_bg2': 999,
     'lvl1_bg3': 999,
     'lvl1_bg4': 999,
+    'lvl2_bg0': 999,
+    'lvl2_bg1': 999,
+    'lvl2_bg2': 999,
+    'lvl2_bg3': 999,
+    'lvl2_bg4': 999,
     'Player1': 300,
     'Player1Atk': 1,
     'Player2': 300,
@@ -54,6 +64,11 @@ ENTITY_SCORE = {
     'lvl1_bg2': 0,
     'lvl1_bg3': 0,
     'lvl1_bg4': 0,
+    'lvl2_bg0': 0,
+    'lvl2_bg1': 0,
+    'lvl2_bg2': 0,
+    'lvl2_bg3': 0,
+    'lvl2_bg4': 0,
     'Player1': 0,
     'Player1Atk': 0,
     'Player2': 0,
@@ -70,6 +85,11 @@ ENTITY_SPEED = {
     'lvl1_bg2': 2,
     'lvl1_bg3': 3,
     'lvl1_bg4': 7,
+    'lvl2_bg0': 3,
+    'lvl2_bg1': 3,
+    'lvl2_bg2': 2,
+    'lvl2_bg3': 3,
+    'lvl2_bg4': 7,
     'Player1': 10,
     'Player1Atk': 10,
     'Player2': 10,
@@ -81,6 +101,8 @@ ENTITY_SPEED = {
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
+
+EVENT_TIMEOUT = pygame.USEREVENT +2
 
 #M
 MENU_OPTION = ('NEW GAME 1P',
@@ -103,6 +125,10 @@ PLAYER_KEY_ATK = {'Player1': pygame.K_RCTRL,
 
 #S
 SPAWN_TIME = 1000
+
+#T
+TIMEOUT_STEP = 100  # Para diminuir o tempo de duração das fases
+TIMEOUT_LEVEL = 20000
 
 #W
 WIN_WIDTH = 960  # Largura da janela do jogo
