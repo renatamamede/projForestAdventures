@@ -128,8 +128,27 @@ SPAWN_TIME = 1000
 
 #T
 TIMEOUT_STEP = 100  # Para diminuir o tempo de duração das fases
-TIMEOUT_LEVEL = 20000
+TIMEOUT_LEVEL = 10000
 
 #W
 WIN_WIDTH = 960  # Largura da janela do jogo
 WIN_HEIGHT = 540  # Altura da janela do jogo
+
+# Temos que deixar esse Score aqui pra poder identificar o wn_width (tem q ser depois que já definimos ele)
+SCORE_POS = {
+    'Title': (WIN_WIDTH / 2, 50),
+    'EnterName': (WIN_WIDTH / 2, 100),
+    'Label': (WIN_WIDTH / 2, 110),
+    'Name': (WIN_WIDTH / 2, 130),
+    'Tutorial': (WIN_WIDTH / 2, 500),
+    0: (WIN_WIDTH / 2, 140),
+    1: (WIN_WIDTH / 2, 160),
+    2: (WIN_WIDTH / 2, 180),
+    3: (WIN_WIDTH / 2, 200),
+    4: (WIN_WIDTH / 2, 220),
+    5: (WIN_WIDTH / 2, 240),
+    6: (WIN_WIDTH / 2, 260),
+    7: (WIN_WIDTH / 2, 280),
+    8: (WIN_WIDTH / 2, 300),
+    9: (WIN_WIDTH / 2, 320),
+}

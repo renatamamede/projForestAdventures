@@ -4,6 +4,8 @@ from pygame import display
 from code.constantes import WIN_HEIGHT, WIN_WIDTH, MENU_OPTION
 from code.level import Level
 from code.menu import Menu
+from code.score import Score
+
 
 # Construtor
 class Game:
@@ -13,6 +15,7 @@ class Game:
 
     def run(self):
         while True:  # Se deixarmos só esse laço sem nada, a janela não responderá.
+            score = Score(self.window)
             menu = Menu(self.window)
             menu_return = menu.run()
 
@@ -23,6 +26,11 @@ class Game:
                 if level_return:  # vamos checar pra chamar o segundo lvl
                     level = Level(self.window, 'Level2', menu_return, player_score)  # O que vai diferenciar o modo de jogo será essa linha
                     level_return = level.run(player_score)
+                    if level_return:  # Agora, depois, e somente depois da fase 2, vamos pegar o score
+                        score.save(menu_return, player_score)
+
+            elif menu_return == MENU_OPTION[3]:  # Opção SCORE
+                score.show()
 
             elif menu_return == MENU_OPTION[4]:  # Opção EXIT
                 pygame.quit()
