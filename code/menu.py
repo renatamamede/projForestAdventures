@@ -12,7 +12,7 @@ class Menu:
         self.surf = pygame.image.load('./asset/menu.png').convert_alpha()  # Carrega a imagem (mas não coloca ela em lugar nenhum ainda)
         self.rect = self.surf.get_rect(left=0, top=0)  # Esses valores são o padrão (nem precisariam ser explicitados). Significa que o retângulo começa na posição 0 da esquerda e do topo
 
-    def run(self, ):
+    def run(self):
         menu_option = 0  # Traz, por padrão, a primeira opção do menu selecionada
         pygame.mixer_music.load('./asset/menu.wav')  # Carrega a música do menu
         pygame.mixer_music.play(-1)  # Coloca a música para tocar. O parâmetro '-1' é para fazer a música recomeçar quando acabar.

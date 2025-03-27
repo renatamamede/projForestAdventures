@@ -11,7 +11,7 @@ class EntityFactory:
     #    pass
 
     @staticmethod
-    def get_entity(entity_name: str, position=(0, 0)):  # 0,0 é o padrão
+    def get_entity(entity_name: str):
         match entity_name:
             case 'level1_bg':  # Nome dos bg. Carregue todos em uma lista
                 list_bg = []

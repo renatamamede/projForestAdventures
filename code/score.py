@@ -26,6 +26,8 @@ class Score:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.score_text(48,'YOU WIN!', COR_LARANJA, SCORE_POS['Title'])
+            text = 'Enter Player 1 name:'
+            score = player_score[0]
             if game_mode == MENU_OPTION[0]:
                 score = player_score[0]
                 text = 'Enter Player 1 name: '
@@ -41,7 +43,7 @@ class Score:
                     text = 'Enter Player 2 name: '
                 else:
                     score = player_score[0]
-                    text = 'Tie! Enter both players initials: '
+                    text = 'It is a Tie! Enter both players initials: '
 
             self.score_text(20, text, COR_BRANCO, SCORE_POS['EnterName'])
 

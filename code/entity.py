@@ -2,9 +2,7 @@
 # Importações:
 from abc import ABC, abstractmethod
 import pygame.image
-
 from code.constantes import ENTITY_HEALTH, ENTITY_DAMAGE, ENTITY_SCORE
-
 
 # Construtor:
 class Entity(ABC):
@@ -19,5 +17,5 @@ class Entity(ABC):
         self.last_dmg = 'None'  # Essa entidade vai servir pra calcularmos o score
 
     @abstractmethod
-    def move(self, ):  # Será implementado pelos filhos da classe, mas o python precisa ser avisado (por isso o decorator @)
+    def move(self):  # Será implementado pelos filhos da classe, mas o python precisa ser avisado (por isso o decorator @)
         pass

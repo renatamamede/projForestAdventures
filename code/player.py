@@ -14,7 +14,7 @@ class Player(Entity):
         super().__init__(name, position)
         self.atk_delay = ENTITY_ATK_DELAY[self.name]
 
-    def move(self, ):  # O ponto 0,0 no plano cartesiano do movimento está no canto superior esquerdo da tela.
+    def move(self):  # O ponto 0,0 no plano cartesiano do movimento está no canto superior esquerdo da tela.
         pressed_key = pygame.key.get_pressed()
         if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 150:  # Coloquei valores aqui e no K_DOWN para limitar o espaço em que o personagem vai se mover. Não quero que ande além do "caminho".
             self.rect.centery -= ENTITY_SPEED[self.name]  # O player é movimentado mexendo no RECT dele

@@ -1,5 +1,5 @@
 # Importações
-from code.constantes import ENTITY_SPEED, WIN_WIDTH, ENTITY_ATK_DELAY
+from code.constantes import ENTITY_SPEED, ENTITY_ATK_DELAY
 from code.enemyAtk import EnemyAtk
 from code.entity import Entity
 
@@ -9,7 +9,7 @@ class Enemy(Entity):
         super().__init__(name, position)
         self.atk_delay = ENTITY_ATK_DELAY[self.name]
 
-    def move(self, ):
+    def move(self):
         self.rect.centerx -= ENTITY_SPEED[self.name]
 
     def atk(self):

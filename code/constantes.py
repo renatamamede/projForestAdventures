@@ -114,12 +114,16 @@ MENU_OPTION = ('NEW GAME 1P',
 #P
 PLAYER_KEY_UP = {'Player1': pygame.K_UP,
                  'Player2': pygame.K_w}
+
 PLAYER_KEY_DOWN = {'Player1': pygame.K_DOWN,
                  'Player2': pygame.K_s}
+
 PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                  'Player2': pygame.K_a}
+
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                  'Player2': pygame.K_d}
+
 PLAYER_KEY_ATK = {'Player1': pygame.K_RCTRL,
                  'Player2': pygame.K_LCTRL}
 
