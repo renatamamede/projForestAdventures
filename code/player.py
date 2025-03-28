@@ -14,8 +14,24 @@ class Player(Entity):
         super().__init__(name, position)
         self.atk_delay = ENTITY_ATK_DELAY[self.name]
 
+#==================================================================================
+        self.images = [
+            pygame.image.load(f'./asset/{name}.png'),
+            pygame.image.load(f'./asset/{name}-2.png'),
+            pygame.image.load(f'./asset/{name}-3.png'),
+            pygame.image.load(f'./asset/{name}-4.png'),
+            pygame.image.load(f'./asset/{name}-5.png'),
+            pygame.image.load(f'./asset/{name}-6.png'),
+            pygame.image.load(f'./asset/{name}-7.png'),
+            pygame.image.load(f'./asset/{name}-8.png'),
+        ]
+        self.image_index = 0
+        self.surf = self.images[self.image_index]
+#===================================================================================
+
     def move(self):  # O ponto 0,0 no plano cartesiano do movimento está no canto superior esquerdo da tela.
         pressed_key = pygame.key.get_pressed()
+        moved = True
         if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 150:  # Coloquei valores aqui e no K_DOWN para limitar o espaço em que o personagem vai se mover. Não quero que ande além do "caminho".
             self.rect.centery -= ENTITY_SPEED[self.name]  # O player é movimentado mexendo no RECT dele
         if pressed_key[PLAYER_KEY_DOWN[self.name]] and self.rect.bottom < 485:  # Use IF. Se for ELIF, o jogo vai entender que só pode se pressionar uma tecla de caa vez. Não é a ideia aqui.
@@ -24,7 +40,9 @@ class Player(Entity):
             self.rect.centerx -= ENTITY_SPEED[self.name]
         if pressed_key[PLAYER_KEY_RIGHT[self.name]] and self.rect.right < WIN_WIDTH:
              self.rect.centerx += ENTITY_SPEED[self.name]
-        pass
+        if moved:
+            self.image_index = (self.image_index + 1) % len(self.images)
+            self.surf = self.images[self.image_index]
 
     def atk(self):
         self.atk_delay -=1
