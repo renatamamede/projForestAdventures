@@ -20,6 +20,7 @@
 ## Em desenvolvimento 🛠️:
 
 - Melhorias de jogabilidade
+- Melhorias nas animações
 - Mais fases e inimigos
 - Telas de Game over e Conclusões de fase
 - Melhorias no sistema de pontuação
