@@ -24,3 +24,10 @@
 - Mais fases e inimigos
 - Telas de Game over e Conclusões de fase
 - Melhorias no sistema de pontuação
+
+## Instalação e execução 💿:
+
+1. Clone o repositório: git clone https://github.com/renatamamede/projLPA.git
+2. Acesse a pasta do projeto: cd projLPA
+3. Instale as dependências: pip install -r requirements.txt
+4. Execute: python main.py
