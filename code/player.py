@@ -28,11 +28,11 @@ class Player(Entity):
         self.surf = self.walk[self.walk_index]
 
         self.atk_img = [
-            pygame.image.load(f'./asset/{name}Atk-1.png'),
-            pygame.image.load(f'./asset/{name}Atk-2.png'),
-            pygame.image.load(f'./asset/{name}Atk-3.png'),
+            #pygame.image.load(f'./asset/{name}Atk-1.png'),
+            #pygame.image.load(f'./asset/{name}Atk-2.png'),
+            #pygame.image.load(f'./asset/{name}Atk-3.png'),
             pygame.image.load(f'./asset/{name}Atk-4.png'),
-            pygame.image.load(f'./asset/{name}Atk-5.png')
+            #pygame.image.load(f'./asset/{name}Atk-5.png')
         ]
         self.atk_index = 0
         self.surf = self.atk_img[self.atk_index]

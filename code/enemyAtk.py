@@ -4,10 +4,10 @@ from code.entity import Entity
 
 class EnemyAtk(Entity):
 
-    def __init__(self, name: str, position: tuple):
+    def __init__(self, name: str, position: tuple, enemy_width: int):
         super().__init__(name, position)
-
+        self.rect.x -= enemy_width
 
     # Se for tiro:
     def move(self):
-        self.rect.centerx -= ENTITY_SPEED[self.name]
+        self.rect.x -= ENTITY_SPEED[self.name]

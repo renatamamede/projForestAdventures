@@ -10,10 +10,10 @@ COR_CIANO = (255,128,255)
 
 #E
 ENTITY_ATK_DELAY = {
-'Player1': 5,
-'Player2': 5,
-'Enemy1': 20,
-'Enemy2': 20,
+'Player1': 10,
+'Player2': 10,
+'Enemy1': 30,
+'Enemy2': 30,
 }
 
 ENTITY_DAMAGE = {
@@ -28,12 +28,12 @@ ENTITY_DAMAGE = {
     'lvl2_bg3': 0,
     'lvl2_bg4': 0,
     'Player1': 1,
-    'Player1Atk': 20,
+    'Player1Atk': 50,
     'Player2': 1,
-    'Player2Atk': 20,
-    'Enemy1': 50,
+    'Player2Atk': 50,
+    'Enemy1': 35,
     'Enemy1Atk': 30,
-    'Enemy2': 80,
+    'Enemy2': 50,
     'Enemy2Atk': 30,
 }
 
@@ -48,13 +48,13 @@ ENTITY_HEALTH = {
     'lvl2_bg2': 999,
     'lvl2_bg3': 999,
     'lvl2_bg4': 999,
-    'Player1': 300,
+    'Player1': 100,
     'Player1Atk': 1,
-    'Player2': 300,
+    'Player2': 100,
     'Player2Atk': 1,
-    'Enemy1': 50,
+    'Enemy1': 150,
     'Enemy1Atk': 1,
-    'Enemy2': 80,
+    'Enemy2': 250,
     'Enemy2Atk': 1,
 }
 
@@ -90,13 +90,13 @@ ENTITY_SPEED = {
     'lvl2_bg2': 2,
     'lvl2_bg3': 3,
     'lvl2_bg4': 7,
-    'Player1': 10,
+    'Player1': 12,
     'Player1Atk': 10,
-    'Player2': 10,
+    'Player2': 12,
     'Player2Atk': 10,
-    'Enemy1': 7,
-    'Enemy1Atk': 10,
-    'Enemy2': 5,
+    'Enemy1': 8,
+    'Enemy1Atk': 15,
+    'Enemy2': 6,
     'Enemy2Atk': 12,
 }
 
@@ -128,11 +128,11 @@ PLAYER_KEY_ATK = {'Player1': pygame.K_RCTRL,
                  'Player2': pygame.K_LCTRL}
 
 #S
-SPAWN_TIME = 1000
+SPAWN_TIME = 750
 
 #T
 TIMEOUT_STEP = 100  # Para diminuir o tempo de duração das fases
-TIMEOUT_LEVEL = 10000
+TIMEOUT_LEVEL = 30000
 
 #W
 WIN_WIDTH = 960  # Largura da janela do jogo
