@@ -19,7 +19,7 @@ from code.player import Player
 # Construtor
 class Level:
     def __init__(self, window: Surface, name: str, game_mode: str, player_score: list[int]):
-        self.timeout = TIMEOUT_LEVEL  # 20 segundos
+        self.timeout = TIMEOUT_LEVEL  # 30 segundos
         self.window = window
         self.name = name
         self.game_mode = game_mode  # Modo de jogo
@@ -86,8 +86,8 @@ class Level:
             # Textos da tela da fase
 
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000 :.1f}s', COR_BRANCO, (10,5))
-            self.level_text(14, f'FPS: {clock.get_fps() :.0f}', COR_BRANCO, (10, WIN_HEIGHT-35))
-            self.level_text(14, f'Entidades: {len(self.entity_list)}', COR_BRANCO, (10, WIN_HEIGHT-20))
+            #self.level_text(14, f'FPS: {clock.get_fps() :.0f}', COR_BRANCO, (10, WIN_HEIGHT-35))
+            #self.level_text(14, f'Entidades: {len(self.entity_list)}', COR_BRANCO, (10, WIN_HEIGHT-20))
             pygame.display.flip()
 
             #Aqui vamos por o mediador pra verificar colisões e vida das entidades:

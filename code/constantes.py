@@ -90,9 +90,9 @@ ENTITY_SPEED = {
     'lvl2_bg2': 2,
     'lvl2_bg3': 3,
     'lvl2_bg4': 7,
-    'Player1': 12,
+    'Player1': 13,
     'Player1Atk': 10,
-    'Player2': 12,
+    'Player2': 13,
     'Player2Atk': 10,
     'Enemy1': 8,
     'Enemy1Atk': 15,
@@ -128,7 +128,7 @@ PLAYER_KEY_ATK = {'Player1': pygame.K_RCTRL,
                  'Player2': pygame.K_LCTRL}
 
 #S
-SPAWN_TIME = 750
+SPAWN_TIME = 1000
 
 #T
 TIMEOUT_STEP = 100  # Para diminuir o tempo de duração das fases
