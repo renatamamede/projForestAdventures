@@ -28,6 +28,6 @@
 ## Instalação e execução 💿:
 
 1. Clone o repositório: git clone https://github.com/renatamamede/projForestAdventures.git
-2. Acesse a pasta do projeto: cd projLPA
+2. Acesse a pasta do projeto: cd projForestAdventures
 3. Instale as dependências: pip install -r requirements.txt
 4. Execute: python main.py
